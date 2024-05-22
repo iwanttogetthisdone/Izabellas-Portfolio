@@ -1,0 +1,1307 @@
+/* Author: Izabella Ryan
+Date: 07 05 2023
+Version: Assignment 3
+*/
+
+/*
+COLOURS
+#353535 - Black-gray
+#3C6E71 - dark-turquoise
+#D9D9D9 - off-white
+#284B63 - dark-blue
+*/
+/* colours for perfect ui colour combinations https://uicolors.app/create */
+/*GLOBAL SETTING
+----------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* Testing to see if other fonts work?*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    /*suject to change // the font type customisation */
+    color: #353535;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+a {
+    color: #353535;
+}
+
+a:visited {
+    color: #284B63;
+}
+
+/* NAVIGATION
+---------------------------------------------------------------------------
+*/
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    /* aligns it to the right/ the end of the page */
+    align-items: center;
+    background-color: #353535;
+    padding: 10px 20px;
+}
+
+.top-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 45;
+    align-items: right;
+}
+
+.top-nav li {
+    margin-right: 20px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sub-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 145px;
+    background-color: #3c6e71;
+}
+
+.sub-nav li {
+    margin-left: 20px;
+}
+
+.sub-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* -------------------buttons for nav -------------------*/
+
+.top-nav a {
+    color: #ffffff;
+    /* white */
+    text-decoration: none;
+    padding: 10px 20px 15px 20px;
+    width: 100%;
+    height: 100px;
+}
+
+.top-nav a:hover {
+    background-color: #356d81;
+}
+
+.top-nav a:visited {
+    color: #ffffff;
+}
+
+nav ul {
+    padding-left: 200px;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+}
+
+nav span {
+    padding: 10px 20px 15px 20px;
+    background-color: #356d81;
+    color: #ffffff;
+}
+
+/* ------------------- Turquoise Element -------------------*/
+.turquoisebox {
+    display: flex;
+    justify-content: flex-end;
+    /* aligns it to the right/ the end of the page */
+    list-style: none;
+    margin: 0;
+    padding: 16px;
+    height: 9px;
+    background-color: #3C6E71;
+
+}
+
+.turquoisebox p {
+    visibility: hidden;
+}
+
+/* ----------------------------BUTTON----------------------------- */
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #353535;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.button p {
+    color: white;
+}
+
+/* ---------------------------- HOME ----------------------------*/
+.home-welcome {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.home-welcome-image {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-image: url("Images/WEBP/Home.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-content {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.home-content h1,
+.home-content .button {
+    margin-top: 0;
+    color: white;
+    text-shadow: -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+.home-content p {
+    margin-top: 0;
+    color: white;
+    text-shadow: -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    margin-top: -14%;
+}
+
+
+/* text over image learning + centered https://www.w3schools.com/css/css_positioning.asp and https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_center*/
+
+.home-button {
+    position: absolute;
+    /* Position the button absolutely within the image */
+    top: 45%;
+    /* Adjust this to fine-tune vertical centering */
+    left: 50%;
+    /* Center horizontally by setting left to 50% */
+    transform: translate(-50%, -50%);
+    /* Adjust positioning for centering */
+    text-align: center;
+    /* Center the text content inside the button */
+
+    /* Button appearance (padding, background, etc.) */
+    background-color: #353535;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 24px;
+    border-radius: 400px;
+    transition: transform 0.1s ease;
+
+}
+
+.home-button:hover {
+    font-size: 20px;
+    margin-left: 20px;
+    /* Add space to the left */
+    /* or */
+    margin-right: 20px;
+    /* Add space to the right */
+}
+
+.home-button p {
+    color: #fff;
+}
+}
+
+/* Change the position to relative to fix the issue of having the button be above  */
+/* ---------------------------- How To Draw ----------------------------*/
+/* ---------------------------- How To Draw ----------------------------*/
+.how-to-draw {
+    position: relative;
+
+}
+
+.how-to-draw .button {
+    position: absolute;
+    /* top: 50%; */
+    /* Adjust the top position as needed */
+    /* left: 50%; */
+    /* Adjust the left position as needed */
+    transform: translate(-50%, 90%);
+
+    height: 10%;
+}
+
+.how-to-draw h2 {
+    text-align: left;
+    font-size: 15px;
+    text-align: center;
+}
+
+.how-to-draw p {
+    flex: initial;
+    font-size: 13px;
+    transform: translate(0%, -%);
+
+}
+
+.how-to-draw iframe {
+    flex: initial;
+    position: static;
+    top: 50%;
+    /* Adjust the top position as needed */
+    left: 50%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.video-container {
+    width: 100%;
+    /* Set width to fill the entire half block */
+    height: 100%;
+    /* Set height to fill the entire half block */
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container iframe {
+    width: 70%;
+    height: 70%;
+    display: block;
+    padding: 10%;
+    padding-left: 15%;
+}
+
+.sidebar {
+    width: 35%;
+}
+
+.sidebar h2 {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar-content {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.sidebar-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sidebar-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+article {
+    display: flex;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.split-square {
+    width: 100%;
+    /* Adjust width as needed */
+    height: 500px;
+    /* Adjust height as needed */
+    position: relative;
+    top: 50%;
+    margin: 0 0 0 0;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.half {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.half-left {
+    background-color: ##eeeeee;
+    left: 0;
+}
+
+.half-right {
+    background-color: #294446;
+    right: 0; 
+}
+/* ---------------------------- HEADER
+----------------------------
+*/
+
+header {
+    background-color: #353535;
+    position: fixed;
+    /* Fix the header at the top */
+    width: 100%;
+    padding-top: 0px;
+}
+
+header {
+    background: #353535;
+    /*url(homehero.jpg) */
+    height: 0px;
+}
+
+header h1 {
+    visibility: hidden;
+    /* hides the izabellas portfolio in bold */
+}
+
+header img {
+    position: relative;
+    /* this makes the logo go above the gradient styling */
+    top: 12px;
+    left: 20px;
+    z-index: 999;
+}
+
+header ul {
+    list-style-position: inherit;
+}
+
+/* I want to move the header block to have the navigation elements  */
+
+/* //////////////////////////////////////////////////////////// Portfolio ////////////////////////////////////////////////////////////// */
+
+.portfolio-wrapper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-content {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    visibility: hidden;
+}
+
+.picture-feed {
+    column-count: 4;
+    /* Adjust as needed */
+    column-gap: 15px;
+    /* Adjust as needed */
+    column-width: auto;
+}
+
+.picture-feed {
+    margin-top: 50px;
+    z-index: 2;
+
+}
+
+.picture-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    /* Adjust as needed */
+    position: relative;
+}
+
+.picture-card img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.picture-card:hover .overlay {
+    opacity: 1;
+    /* Show on hover */
+}
+
+.picture-card:hover .overlay {
+    opacity: 1;
+}
+
+.picture-card:hover p {
+    visibility: visible
+}
+
+.portfoliohome {
+    position: relative;
+    /* makes the image adjust to any kind of screen */
+    display: inline-block;
+}
+
+.portfoliohome {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.picture-card img {
+    transition: transform 0.3s ease;
+    /* Smooth transition for the zoom effect */
+    z-index: 3;
+}
+
+.picture-card:hover img {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover */
+    z-index: 3;
+}
+
+/* --- inside the first image example for concept -------------------------------------------------- */
+
+/* Style the content wrapper to use flexbox */
+
+.example-content-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center-aligns items */
+    background-color: #353535;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Text color inside the wrapper */
+}
+
+/* Ensure the image has a fixed width and maintains aspect ratio */
+.example-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    padding-left:20px;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Style the text content */
+.example-content {
+    max-width: 600px; /* Adjust the max-width as needed */
+    padding:inherit;
+}
+
+.example-content h2 {
+    margin-top: 0;
+    color: #fff;
+     font-size:30px;
+}
+
+.example-content p {
+    color: #fff;
+    line-height: 1.6;
+    font-size:16px;
+}
+/* ---------------------------- Image Area ---------------------------- */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Style for the heading over the image */
+.image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the heading when hovering over the image container */
+.image-container:hover h2 {
+    opacity: 1;
+}
+
+.portfolio-content {
+    position: absolute;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.portfolio-content p {
+    
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+      top: 50%;
+}
+
+/* Style for the heading over the image */
+.image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the heading when hovering over the image container */
+.image-container:hover h2 {
+    opacity: 1;
+}
+
+.portfolio-content {
+    position: absolute;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.portfolio-content p {}
+
+}
+
+/* ---------------------------- ABOUT ---------------------------- */
+.about-page {
+  margin: 100px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Main content styles */
+main {
+    margin-bottom: 20px;
+}
+details{
+    padding-left: 40px;
+}
+. {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+/* Article styles */
+article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* About Video styles */
+.about_video {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about_video iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+}
+
+.about_video p {
+    margin-top: 10px;
+}
+/* DRAW A CIRCLE */
+
+.draw {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:6%;
+}
+
+.draw h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.draw p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.draw img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.draw section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.draw section h2 {
+    margin-bottom: 10px;
+}
+
+.draw section p {
+    margin-bottom: 10px;
+}
+
+.draw section h3 {
+    margin-bottom: 5px;
+}
+
+.draw section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.draw section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.draw section ul li a {
+    margin-right: 10px;
+}
+
+.draw section ul li img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+draw section ul li {
+    padding: 40px;
+}
+
+/* ---------------------------- SOCIALS ---------------------------- */
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-contact, .recent-artwork {
+    flex-basis: 45%;
+}
+
+.social-contact h2, .recent-artwork h2 {
+    margin-bottom: 10px;
+}
+
+.social-buttons {
+    margin-bottom: 20px;
+}
+
+.social-buttons ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-buttons ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-buttons ul li img {
+    vertical-align: middle;
+}
+
+.social-picture-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.social-picture-card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.social-picture-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.social-see-more {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #488284;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color:#fff;
+}
+
+/* Aside Styles */
+aside.education {
+    background-color: lightgray;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.social-education h2 {
+    margin-bottom: 10px;
+}
+
+.social-google-maps {
+    margin-top: 20px;
+}
+
+/* ----------------------------PAGE LAYOUT / IMAGE SOCIAL LAYOUT ---------------------------- */
+.social-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align the elements horizontally */
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    margin-bottom: 20px;
+    /* Add spacing between social buttons and "See More" button */
+    width: 100%;
+    /* Ensure it takes full width */
+    align-items: center;
+}
+
+.social-buttons ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Column format for social listings */
+    align-items: center;
+}
+
+.social-buttons ul li {
+    margin: 10px 0;
+    /* Vertical spacing between items */
+}
+
+.social-picture-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+    /* Align to bottom */
+    width: 100%;
+}
+
+.social-picture-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    /* Ensure there is space around each image */
+}
+
+.social-picture-card img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    /* Smooth transition for the zoom effect */
+}
+
+.social-picture-card:hover img {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover */
+}
+
+/* prt 2*/
+
+.social-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align the elements horizontally */
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    margin-bottom: 20px;
+    /* Add spacing between social buttons and "See More" button */
+    width: 100%;
+    /* Ensure it takes full width */
+    align-items: center;
+}
+
+.social-buttons ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Column format for social listings */
+    align-items: center;
+}
+
+.social-buttons ul li {
+    margin: 10px 0;
+    /* Vertical spacing between items */
+}
+
+.social-picture-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+    /* Align to bottom */
+    width: 100%;
+}
+
+.social-picture-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    /* Ensure there is space around each image */
+}
+
+.social-picture-card img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    /* Smooth transition for the zoom effect */
+}
+
+.social-picture-card:hover img {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover h2 {
+    opacity: 1;
+}
+
+.portfolio-content {
+    position: absolute;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.social-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.social-content {
+    flex: 1;
+}
+
+.social-picture-feed {
+    margin-top: auto;
+    /* Pushes the image grid to the bottom */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.social-contact,
+.education,
+.recent-artwork {
+    flex: 1;
+    margin: 20px;
+}
+
+.social-buttons ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.social-buttons ul li {
+    margin: 10px;
+}
+
+.social-picture-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.social-picture-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.social-picture-card img {
+    width: 100%;
+    height: 100%;
+}
+/* ------------------------------------PRICES -----------------------------*/
+/* Wrapper styling */
+#price-page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+#price-page-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#price-page-header img {
+    margin-right: 20px;
+}
+
+#price-page-header h1 {
+    font-size: 1.8em;
+    color: #353535;
+}
+
+/* Navigation styling */
+#price-page-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #353535;
+}
+
+#price-page-nav ul li {
+    margin: 0 15px;
+}
+
+#price-page-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#price-page-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Turquoise box styling */
+#price-page-turquoise-box {
+    background-color: #40e0d0;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* Main content styling */
+#price-page-main {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#price-page-main h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#price-page-main p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Table styling */
+#price-page-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#price-page-table th,
+#price-page-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#price-page-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#price-page-table caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+}
+
+/* Button styling */
+#price-page-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8abebe;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Adjust the border-radius value to control the curve */
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#price-page-button:hover {
+    background-color: #0056b3;
+}
+}
+/* ---------------------------- FOOTER remove???
+----------------------------------------
+*/
+
+footer {
+    font-size: 1.2em;
+    text-align: right;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav2 {
+    display: flex;
+    background-color: #284B63;
+}
+
+
+
+/* FOOTER
+----------------------------------------
+*/
+
+footer {
+    font-size: 0.9em;
+    text-align: right;
+    /* change the direction of the footer */
+}
+
+footer ul {
+    list-style: none;
+    /* no more circles for listing */
+    display: flex;
+    /*  horizontal flex */
+    justify-content: center;
+}
+
+footer li {
+    margin-right: 20px;
+    /* Adjust the gap between list items */
+
+
+    /* media queiries PORTFOLIO PAGE */
+    @media (max-width: 768px) {
+        .picture-feed {
+            column-count: 2;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .picture-feed {
+            column-count: 1;
+        }
+    }
+
+    /* Media Queries #3 600
+----------------------------------------*/
+    /*@media (max-width:600px) {
+    #wrapper {
+        width: 100%;
+    }
+h2, p, a, blockquote {
+    font-size: 0.9em; /* You can change multiple text elements through using ',' to continue the string */
+}
+
+/*header {
+        background:#211d1c;
+            height:125px;
+    }
+    
+header img{
+        width:20%; height: auto;
+    }
+    nav a{
+        padding: 5px 10px;
+    }
+    #three-columns img{
+        display: none;
+    }
+    #three-coloumns section{
+        padding: 0;
+    }
+    #community {
+        display: block;
+    }
+    #community div {
+    padding-top: 0; 
+    }
+    aside{
+       display: flex;
+    flex-wrap: wrap;
+    }
+    blockquote{
+        padding-top: 3; 
+       /* learning support by ChatGPT, W3schools & Mdm Web Docs https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox, https://www.w3schools.com/css/css_dimension.asp, https://www.w3schools.com/css/css_padding.asp LEARNING: How to correctly create padding and remove images through display and padding elements */
+
+}
+}
+
+/*
+    
